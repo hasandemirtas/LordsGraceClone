@@ -9,14 +9,36 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <style>
+        @font-face {
+            font-family: "GoodVibrations";
+            src: url("fonts/GoodVibrations\ Script.ttf") format("truetype");
+        }
+        /* Small devices (landscape phones) */
+        @media (min-width: 576px) { 
+            .content{
+                margin: 0px 50px ;
+            }
+        }
+
+        /* Medium devices (tablets)*/
+        @media (min-width: 768px) { 
+            .content{
+                margin: 0px 100px ;
+            }
+        }
+
+        /* Large devices (desktops)*/
+        @media (min-width: 992px) { 
+            .content{
+                margin: 0px 200px ;
+            }
+        }
         body{
             background-image: url("bg.jpg");
             background-repeat:repeat-y;
             background-size: 100%;
         }
-        .content{
-            margin: 0px 200px ;
-        }
+
         .navigation_bar{
             background-color: #3D3739;
             display: inline-block;
@@ -57,12 +79,23 @@
             width: 30px;
             height: 30px;
         }
+        .carousel-icon{
+            width: 30px;
+            height: 30px;
+        }
+        .carousel-icon:hover{
+            content: url("icons/active-circled.png");
+        }
         .footer{
             background-color: #6F6D70;
         }
         .footer-txt{
             font-size: 13px;
             color: white;
+        }
+        .footer-link:hover{
+            text-decoration: underline;
+            color: #BF565B;
         }
         .card_btn{
             background-color: #2A2124;
@@ -94,11 +127,11 @@
     <div class="content my-4">
 
         <div>
-            <h1 class="text-white" style="font-family: 'Brush Script MT', cursive;">Lord's Grace</h1>
+            <h1 class="text-white" style="font-family: GoodVibrations">Lord's Grace</h1>
             <div class="d-flex flex-row-reverse mb-4">
-                <img src="icons/twitter.svg" class="circle-icon">
-                <img src="icons/facebook.svg" class="circle-icon">
-                <img src="icons/plus.svg" class="circle-icon">
+                <img src="icons/twitter.svg" class="circle-icon" onmousemove="src='icons/twitter-active.png'" onmouseleave="src='icons/twitter.svg'">
+                <img src="icons/facebook.svg" class="circle-icon" onmousemove="src='icons/facebook-active.png'" onmouseleave="src='icons/facebook.svg'">
+                <img src="icons/plus.svg" class="circle-icon" onmousemove="src='icons/plus-active.png'" onmouseleave="src='icons/plus.svg'">
             </div>
         </div>
         <div></div>
@@ -114,13 +147,13 @@
         <div class="mb-1 carousel">
             <div class="carousel-text my-5">
                 <h1 class="text-white">A place where unconditional</h1>
-                <h1 class="text-white"><span class="text-white" style="font-family: 'Brush Script MT', cursive;">Love</span> changes lives</h1>
+                <h1 class="text-white"><span class="text-white" style="font-family: GoodVibrations">Love</span> changes lives</h1>
             </div>
             <div class="d-flex justify-content-center mt-4">
-                <img src="icons/active-circled.png" class="circle-icon">
-                <img src="icons/circled.png" class="circle-icon">
-                <img src="icons/circled.png" class="circle-icon">
-                <img src="icons/circled.png" class="circle-icon">
+                <img src="icons/active-circled.png" class="carousel-icon">
+                <img src="icons/circled.png" class="carousel-icon">
+                <img src="icons/circled.png" class="carousel-icon">
+                <img src="icons/circled.png" class="carousel-icon">
             </div>
         </div>
 
@@ -165,11 +198,11 @@
                 <div class="col-lg-4 " style="border-right: 1px solid white;">
                     <h5 class="text-white m-4 ">About Us</h5>
                     <ul class="diamond_list">
-                        <li class="footer-txt">Aenean ponummy</li>
-                        <li class="footer-txt">Phasellers porta</li>
-                        <li class="footer-txt">Fusce susclipt varlus</li>
-                        <li class="footer-txt">Cum socis natoque</li>
-                        <li class="footer-txt">Penatibus et magnis</li>
+                        <li class="footer-txt footer-link">Aenean ponummy</li>
+                        <li class="footer-txt footer-link">Phasellers porta</li>
+                        <li class="footer-txt footer-link">Fusce susclipt varlus</li>
+                        <li class="footer-txt footer-link">Cum socis natoque</li>
+                        <li class="footer-txt footer-link">Penatibus et magnis</li>
                     </ul>
                 </div>
                 <div class="col-lg-4 " style="border-right: 1px solid white;">
